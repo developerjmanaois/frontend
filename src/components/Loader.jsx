@@ -1,9 +1,11 @@
-import React from 'react'
+import './loader.css'
 
 const Loader = () => {
-  return (
-    <div>Loader</div>
-  )
+    return (
+        <div className="backdrop">
+            <span className="loading loading-ring loading-lg"></span>
+        </div>
+    )
 }
 
 export default Loader

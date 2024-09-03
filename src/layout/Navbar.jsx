@@ -40,19 +40,41 @@ const Navbar = () => {
                 <NavLink to="/"><img className="logo" src={logo} alt="" /></NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
-            <ul className="menu-horizontal gap-10 mt-10">
-                <li className="hover:bg-pink nav-menu"><NavLink to="/">Home</NavLink></li>
-                <li className="hover:bg-pink nav-menu"><NavLink to="/about">About</NavLink></li>
-                <li className="hover:bg-pink nav-menu"><NavLink to="/feature">Feature</NavLink></li>
-                <li className="hover:bg-pink nav-menu"><NavLink to="/service">Service</NavLink></li>
-                <li className="hover:bg-pink nav-menu"><NavLink to="/contact">Contact</NavLink></li>
-            </ul>
+                <ul className="menu-horizontal mt-14 font-semibold uppercase">
+                    <li className="hover:bg-pink nav-menu"><NavLink to="/">Home</NavLink></li>
+                    <li className="hover:bg-pink nav-menu"><NavLink to="/about">About</NavLink></li>
+                    <li className="hover:bg-pink nav-menu"><NavLink to="/feature">Feature</NavLink></li>
+                    <li className="hover:bg-pink nav-menu"><NavLink to="/service">Service</NavLink></li>
+                    <li className="hover:bg-pink nav-menu"><NavLink to="/contact">Contact</NavLink></li>
+                </ul>
             </div>
-            <div className="navbar-end mt-10">
+            <div className="navbar-end mt-10 font-semibold uppercase">
                 <a className="btn bg-pink text-white">Log ind</a>
             </div>
         </div>
     )
 }
+
+{/* Video Popup
+      <dialog id="video_modal" className="modal">
+        <div>
+          <button onClick={closeVideoPopup} className="btn btn-sm btn-circle absolute right-80 top-72 z-10">
+            <IoClose />
+          </button>
+          
+          { videoLink && (
+              <iframe
+                width="600"
+                height="350"
+                src={videoLink.replace('watch?v=', 'embed/')}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+          )}
+        </div>
+      </dialog> */}
+
 
 export default Navbar

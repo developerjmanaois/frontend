@@ -2,61 +2,53 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+@font-face {
+  font-family: 'themify';
+  src: url('./assets/fonts/themify.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'playfair';
+  src: url('./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nanum';
+  src: url('./assets/fonts/NanumMyeongjo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nanumBold';
+  src: url('./assets/fonts/NanumMyeongjo-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'themify', sans-serif;
+}
+
+header, footer {
+  max-width: 1000px;
+  margin: 0 300px;
   text-align: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.logo {
-  height: 120px;
+  height: 80px;
+  /* margin-left: 80px; */
 }
 
 .nav-menu {
-  display: inline-flex;
-  height: 3rem;
-  min-height: 3rem;
-  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
   cursor: pointer;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   padding: 10px 20px;
   border-radius: 5px;
 }
@@ -66,4 +58,35 @@
   border-color: #fd9392;
   --tw-bg-opacity: 1;
   background-color: #fd9392;
+}
+
+.navbar-start {
+  width: 20%;
+}
+
+.navbar-end {
+  width: 20%;
+}
+
+.spa-img {
+  width: 600px;
+  object-fit: contain;
+}
+
+.leaf-img {
+  width: 200px;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }
