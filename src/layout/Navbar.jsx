@@ -28,34 +28,28 @@ const Navbar = () => {
                     className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                     <li><a>Item 1</a></li>
                     <li>
-                    <a>Parent</a>
-                    <ul className="p-2">
-                        <li><a>Submenu 1</a></li>
-                        <li><a>Submenu 2</a></li>
-                    </ul>
+                        <a>Parent</a>
+                        <ul className="p-2">
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                        </ul>
                     </li>
                     <li><a>Item 3</a></li>
                 </ul>
                 </div>
-                <NavLink to="/"><img src={logo} alt="" /></NavLink>
+                <NavLink to="/"><img className="logo" src={logo} alt="" /></NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                <li><a>Item 1</a></li>
-                <li>
-                    <details>
-                    <summary>Parent</summary>
-                    <ul className="p-2">
-                        <li><a>Submenu 1</a></li>
-                        <li><a>Submenu 2</a></li>
-                    </ul>
-                    </details>
-                </li>
-                <li><a>Item 3</a></li>
-                </ul>
+            <ul className="menu-horizontal gap-10 mt-10">
+                <li className="hover:bg-pink nav-menu"><NavLink to="/">Home</NavLink></li>
+                <li className="hover:bg-pink nav-menu"><NavLink to="/about">About</NavLink></li>
+                <li className="hover:bg-pink nav-menu"><NavLink to="/feature">Feature</NavLink></li>
+                <li className="hover:bg-pink nav-menu"><NavLink to="/service">Service</NavLink></li>
+                <li className="hover:bg-pink nav-menu"><NavLink to="/contact">Contact</NavLink></li>
+            </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Log ind</a>
+            <div className="navbar-end mt-10">
+                <a className="btn bg-pink text-white">Log ind</a>
             </div>
         </div>
     )

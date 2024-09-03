@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
+    colors: {
+      pink: "#FF817E",
+      white: "#FFFFFF",
+    }
   },
   plugins: [require("daisyui", "tw-elements/dist/plugin.cjs")],
   darkMode: "class"
