@@ -15,6 +15,7 @@ export default {
     },
     colors: {
       pink: "#FF817E",
+      overlay: "#F27E79",
       white: "#FFFFFF",
       beige: "#FCF5EE",
       gray: "#8C8C8C",

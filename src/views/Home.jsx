@@ -9,6 +9,7 @@ import jasmine from '../assets/images/jasmine.png'
 import Loader from '../components/Loader'
 import { MdOutlinePlayArrow } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
+import { NavLink } from 'react-router-dom'
 
 const Home = () => {
 
@@ -121,7 +122,7 @@ const Home = () => {
               <h1 className='text-4xl font-bold mb-5 font-nanumBold'>{ dataAbout.title }</h1>
               <p className='text-gray text-sm'>{ parse(dataAbout.content) }</p>
             
-              <button className='btn bg-pink rounded-full px-10 text-white uppercase mt-16'>Read more</button>
+              <button className='btn bg-pink rounded-full px-10 text-white uppercase mt-16'><NavLink to="/">Read more</NavLink></button>
             </div>
           }
           
