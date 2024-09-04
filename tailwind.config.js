@@ -15,10 +15,12 @@ export default {
     },
     colors: {
       pink: "#FF817E",
+      bgwhite: "#FFF9F8",
       overlay: "#F27E79",
       white: "#FFFFFF",
       beige: "#FCF5EE",
       gray: "#8C8C8C",
+      darkGray: "#30383B"
     }
   },
   plugins: [require("daisyui", "tw-elements/dist/plugin.cjs")],

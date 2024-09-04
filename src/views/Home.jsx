@@ -10,6 +10,9 @@ import Loader from '../components/Loader'
 import { MdOutlinePlayArrow } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 import { NavLink } from 'react-router-dom'
+import Services from './Services';
+import Feedback from './Feedback';
+import Team from './Team';
 
 const Home = () => {
 
@@ -120,7 +123,7 @@ const Home = () => {
               
               <span className='uppercase font-semibold mb-5 text-gray'>About our spa center</span>
               <h1 className='text-4xl font-bold mb-5 font-nanumBold'>{ dataAbout.title }</h1>
-              <p className='text-gray text-sm'>{ parse(dataAbout.content) }</p>
+              <p className='text-gray text-sm font-light leading-6'>{ parse(dataAbout.content) }</p>
             
               <button className='btn bg-pink rounded-full px-10 text-white uppercase mt-16'><NavLink to="/">Read more</NavLink></button>
             </div>
@@ -132,6 +135,10 @@ const Home = () => {
         </div>
         
       </section>
+
+      <Services />
+      <Feedback />
+      <Team />
     </>
   )
 }
