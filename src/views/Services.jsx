@@ -34,7 +34,7 @@ const Services = () => {
 
         <div className='pb-20'>
             
-            <div className="container mt-20">
+            <div className="container max-w-full">
                 { randomTreatments &&
                     randomTreatments.map((item, index) => (
                         <div key={index} className="image-container">

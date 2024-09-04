@@ -20,7 +20,9 @@ export default {
       white: "#FFFFFF",
       beige: "#FCF5EE",
       gray: "#8C8C8C",
-      darkGray: "#30383B"
+      darkGray: "#30383B",
+      lightgray: "#E8E5E5",
+      iconcolor: "#3A4454",
     }
   },
   plugins: [require("daisyui", "tw-elements/dist/plugin.cjs")],

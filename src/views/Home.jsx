@@ -13,6 +13,7 @@ import { NavLink } from 'react-router-dom'
 import Services from './Services';
 import Feedback from './Feedback';
 import Team from './Team';
+import Booking from './Booking';
 
 const Home = () => {
 
@@ -139,6 +140,7 @@ const Home = () => {
       <Services />
       <Feedback />
       <Team />
+      <Booking />
     </>
   )
 }

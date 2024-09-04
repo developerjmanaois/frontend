@@ -4,7 +4,7 @@ import axios from 'axios'
 // Brug evt. axios base - hvis server/apis url er den samme
 //let axiosBase = axios.create( { baseURL: "http://localhost:5120/" } )
 
-// axios.defaults.withCredentials = true // send cookie med VIGTIGT!!!!
+axios.defaults.withCredentials = true // send cookie med VIGTIGT!!!!
 
 const useRequestData = () => {
 

@@ -30,6 +30,17 @@
   font-style: normal;
 }
 
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
 body {
   font-family: 'themify', sans-serif;
 }
@@ -81,10 +92,11 @@ header, footer {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 470px);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  width: 100vw;
+  width: 100%;
   height: 700px;
+  margin: 70px auto;
 }
 
 .image-container {
