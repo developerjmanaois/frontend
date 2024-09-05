@@ -2,6 +2,7 @@ import React from 'react'
 import useRequestData from '../hooks/useRequestData'
 import { useEffect } from 'react';
 import parse from 'html-react-parser';
+import '../assets/sass/team.scss'
 
 const Team = () => {
 
@@ -23,11 +24,11 @@ const Team = () => {
                 Our team of professionals is dedicated to providing you with the highest quality of treatment and care. We are committed to ensuring that you feel comfortable and confident throughout your journey with us.
             </p>
         </div>
-        <div className='grid grid-cols-3 max-w-7xl mx-auto'>
+        <div className='grid grid-cols-3 max-w-7xl mx-auto teamContainer'>
             
             { data && 
                 data.map((item, index) => (
-                    <div key={index} className="card bg-base-100 w-96 border border-beige rounded-none">
+                    <div key={index} className="card bg-base-100 w-96 border border-beige rounded-none teamImgContainer">
                         <figure className="px-6 pt-6">
                             <img
                             src={`${baseUrl}${item.image}`}

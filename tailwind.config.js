@@ -5,7 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+  
     extend: {
+      screens: { 'xs': { 'max': '640px' } },
       fontFamily: {
         themify: ["Themify", "sans-serif"],
         playfair: ["Playfair Display", "serif"],

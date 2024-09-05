@@ -22,10 +22,14 @@ const Feedback = () => {
         if (data && data.length > 3) {
             const timer = setInterval(() => {
                 setSlideIndex(prevIndex => (prevIndex + 1) % 3);
-            }, 4000);
+            }, 5000);
             return () => clearInterval(timer);
         }
     }, [data]);
+
+    const handleDotClick = (index) => {
+        setSlideIndex(index);
+    };
 
     const displayedData = data && data.slice(0, 3);
 
@@ -41,7 +45,7 @@ const Feedback = () => {
                     <div className='bg-image carousel-item w-full flex justify-center'>
                         <div className='bg-text'>
                             <div className='pb-10'>
-                                <p className='max-w-4xl text-center'>{displayedData[slideIndex].content}</p>
+                                <p className='max-w-4xl text-center feedbackContent'>{displayedData[slideIndex].content}</p>
                             </div>
                             <div className="max-w-xs text-center mx-auto">
                                 <img
@@ -60,6 +64,7 @@ const Feedback = () => {
                                     <span
                                         key={index}
                                         className={`dot ${slideIndex === index ? 'active' : ''}`}
+                                        onClick={() => handleDotClick(index)}
                                     ></span>
                                 ))}
                             </div>

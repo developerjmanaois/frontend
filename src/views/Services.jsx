@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import icon from '../assets/images/1.png'
 import { NavLink } from 'react-router-dom'
 import parse from 'html-react-parser';
+import '../assets/sass/services.scss'
+import massage from '../assets/images/4.jpg'
 
 const Services = () => {
 
@@ -34,7 +36,10 @@ const Services = () => {
 
         <div className='pb-20'>
             
-            <div className="container max-w-full">
+            <div className="container max-w-full treatmentContainer">
+                <div className='md:hidden hiddenImg'>
+                    <img className='massageImg' src={massage} alt="massage" />
+                </div>
                 { randomTreatments &&
                     randomTreatments.map((item, index) => (
                         <div key={index} className="image-container">
@@ -56,12 +61,12 @@ const Services = () => {
                 <h1 className='text-4xl font-nanumBold font-extrabold'>
                     Popular Procedures
                 </h1>
-                <p className='w-1/2 mx-auto font-themify text-gray mt-7 text-sm leading-6'>Discover our range of popular procedures designed to enhance your well-being and elevate your appearance. Each treatment is tailored to provide exceptional results and a luxurious experience.</p>
+                <p className='w-1/2 mx-auto font-themify text-gray mt-7 text-sm leading-6 treatmentText'>Discover our range of popular procedures designed to enhance your well-being and elevate your appearance. Each treatment is tailored to provide exceptional results and a luxurious experience.</p>
             </div>
-            <div className='grid grid-cols-3 max-w-7xl mx-auto'>
+            <div className='grid grid-cols-3 max-w-7xl mx-auto procedureContainer'>
                 { data && 
                     data.slice(0, 3).map((item, index) => (
-                        <div key={index} className="card bg-base-100 w-96 border border-beige rounded-none">
+                        <div key={index} className="card bg-base-100 w-96 border border-beige rounded-none imageContainer">
                             <figure className="px-6 pt-6">
                                 <img
                                 src={`${baseUrl}${item.image}`}
@@ -72,7 +77,7 @@ const Services = () => {
                                 <h2 className="card-title font-nanumBold">{item.title}</h2>
                                 <div className='text-gray font-light text-sm leading-5'>{parse(truncateContent(item.content, 120))}</div>
                                 <div className="card-actions">
-                                <NavLink to="services" className="btn bg-darkGray text-white uppercase font-themify px-8 rounded-full mt-10">
+                                <NavLink to="services" className="btn bg-darkGray text-white uppercase font-themify px-8 rounded-full mt-10 hover:bg-pink">
                                     Read more
                                 </NavLink>
                                 </div>

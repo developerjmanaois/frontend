@@ -1,0 +1,78 @@
+@media (min-width: 380px) and (max-width: 767px) {
+    .bookingContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-area: 1/1;
+        padding: 0;
+        margin: 0;
+        gap: 100px;
+    }
+
+    .formContainer  {
+        padding-bottom: 50px;
+        position: relative;
+
+        .successMessage {
+            position: absolute;
+            top: -50px;
+            left: 130px;
+        }
+
+        .formBooking {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-area: 1/1;
+            padding: 0 20px;
+            margin: 0;
+            gap: 30px;
+    
+        }
+    
+        .formTextArea {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-area: 1/1;
+            padding-top: 50px;
+            padding: 50px 20px 0 20px;
+            margin: 0;
+            gap: 30px;
+        }
+    
+        .bookingBtn {
+            margin-left: 20px;
+        }
+    }
+ 
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .bookingImg {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .formContainer {
+        padding: 40px 0;
+        position: relative;
+
+        .successMessage {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    
+        .formBooking, .formTextArea {
+            margin: 0;
+            padding: 20px;
+        }
+
+        .bookingBtn {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    
+}
