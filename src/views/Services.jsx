@@ -6,6 +6,8 @@ import { NavLink } from 'react-router-dom'
 import parse from 'html-react-parser';
 import '../assets/sass/services.scss'
 import massage from '../assets/images/4.jpg'
+import Loader from '../components/Loader'
+import Error from '../components/Error'
 
 const Services = () => {
 
@@ -35,6 +37,9 @@ const Services = () => {
     return (
 
         <div className='pb-20'>
+
+            { (isLoading || isLoadingRandom) && <Loader /> }
+            { (error || errorRandom) && <Error /> }
             
             <div className="container max-w-full treatmentContainer">
                 <div className='md:hidden hiddenImg'>
@@ -44,12 +49,12 @@ const Services = () => {
                     randomTreatments.map((item, index) => (
                         <div key={index} className="image-container">
                             <img src={`${baseUrl}${item.image}`} alt={item.title} className="image"/>
-                            <NavLink to="services">
-                                <div className='overlay'>
-                                    <img className='icon' src={icon} alt="icon" />
-                                    <div className='text uppercase font-themify w-full'>{item.title}</div>
-                                </div>
-                            </NavLink>
+                            
+                            <div className='overlay'>
+                                <NavLink to="services"><img className='icon' src={icon} alt="icon" /></NavLink>
+                                <div className='text uppercase font-themify w-full'>{item.title}</div>
+                            </div>
+                            
                         </div>
                     ))
                     
@@ -75,7 +80,7 @@ const Services = () => {
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title font-nanumBold">{item.title}</h2>
-                                <div className='text-gray font-light text-sm leading-5'>{parse(truncateContent(item.content, 120))}</div>
+                                <div className='text-gray font-light text-sm leading-5'>{parse(truncateContent(item.content, 100))}</div>
                                 <div className="card-actions">
                                 <NavLink to="services" className="btn bg-darkGray text-white uppercase font-themify px-8 rounded-full mt-10 hover:bg-pink">
                                     Read more

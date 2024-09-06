@@ -1,8 +1,13 @@
 import React from 'react'
+import AppointmentAdmin from './AppointmentAdmin'
+import Footer from '../../layout/Footer'
 
 const HomeAdmin = () => {
   return (
-    <div><h1>HomeAdmin</h1></div>
+    <div>
+      <AppointmentAdmin />
+      <Footer />
+    </div>
   )
 }
 

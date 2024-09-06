@@ -17,6 +17,7 @@ export default {
     },
     colors: {
       pink: "#FF817E",
+      lightpink: "#FFE5E4",
       bgwhite: "#FFF9F8",
       overlay: "#F27E79",
       white: "#FFFFFF",
@@ -25,6 +26,7 @@ export default {
       darkGray: "#30383B",
       lightgray: "#E8E5E5",
       iconcolor: "#3A4454",
+      dropdownbg: "#FBF5ED",
     }
   },
   plugins: [require("daisyui", "tw-elements/dist/plugin.cjs")],

@@ -3,6 +3,9 @@ import useRequestData from '../hooks/useRequestData'
 import { useEffect } from 'react';
 import parse from 'html-react-parser';
 import '../assets/sass/team.scss'
+import { FaFacebookF, FaTwitter } from "react-icons/fa";
+import { TiSocialGooglePlus } from "react-icons/ti";
+import { CiInstagram } from "react-icons/ci";
 
 const Team = () => {
 
@@ -28,24 +31,46 @@ const Team = () => {
             
             { data && 
                 data.map((item, index) => (
-                    <div key={index} className="card bg-base-100 w-96 border border-beige rounded-none teamImgContainer">
-                        <figure className="px-6 pt-6">
+                    
+                    <div key={index} className="bg-base-100 w-full teamImgContainer relative">
+                        <figure className="px-6 pt-6 w-full">
                             <img
                             src={`${baseUrl}${item.image}`}
-                            alt="Shoes"
+                            alt={item.name}
+                            className='w-full h-full object-cover'
                             />
                         </figure>
-                        <div className="card-body items-center text-center">
-                            <h2 className="card-title font-nanumBold">
-                                {item.firstname} {item.lastname}
-                            </h2>
-                            <span className='text-sm'>
-                                {item.role}
-                            </span>
+                        <div tabIndex={0} className="collapse bg-base-100 rounded-none w-80 shadow-xl mx-auto absolute -bottom-24 right-14 nameContainer">
+                            <div className="collapse-title text-xl font-medium px-0 pt-5">
+                                <h2 className="card-title font-nanumBold mt-5 mb-3 flex justify-center mx-auto">
+                                    {item.firstname} {item.lastname}
+                                </h2>
+                                <span className='text-sm flex justify-center mb-2'>
+                                    {item.role}
+                                </span>
+                            </div>
+                            <div className="collapse-content flex justify-center px-4 pb-6 mb-5 gap-2">
+                                <div className='flex items-center justify-center w-12 h-12 border border-gray-300 rounded-full'>
+                                    <FaFacebookF className='text-xl text-blue-600' />
+                                </div>
+                                <div className='flex items-center justify-center w-12 h-12 border border-gray-300 rounded-full p-2'>
+                                    <FaTwitter className='text-xl text-blue-400' />
+                                </div>
+                                <div className='flex items-center justify-center w-12 h-12 border border-gray-300 rounded-full p-2'>
+                                    <TiSocialGooglePlus className='text-xl text-red-500' />
+                                </div>
+                                <div className='flex items-center justify-center w-12 h-12 border border-gray-300 rounded-full p-2'>
+                                    <CiInstagram className='text-xl text-purple-600' />
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+                    
                 ))
             }
+
+
         </div>
     </div>
   )

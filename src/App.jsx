@@ -7,9 +7,12 @@ import Contact from './views/Contact'
 import Login from './views/Login'
 import NoMatch from './views/NoMatch'
 import Layout from './layout/Layout'
-import LayoutAdmin from './Layout/ADMIN/LayoutAdmin'
+import LayoutAdmin from './views/ADMIN/LayoutAdmin'
 import HomeAdmin from './views/ADMIN/HomeAdmin'
-import News from './views/News';
+import AppointmentAdmin from './views/ADMIN/AppointmentAdmin';
+import AppointmentEdit from './views/ADMIN/AppointmentEdit';
+import Features from './views/Features';
+import Services from './views/Services';
 
 function App () {
 
@@ -23,14 +26,17 @@ function App () {
           <Route index element={ <Home /> } />
           <Route path="about" element={ <About /> } />
           <Route path="contact" element={ <Contact /> } />
-          <Route path="news" element={ <News /> } />
+          <Route path="features" element={ <Features /> } />
           <Route path="login" element={ <Login /> } />
+          <Route path="services" element={ <Services /> } />
           <Route path="*" element={ <NoMatch /> } />
         </Route>
 
         {/* ---------------- ADMIN ---------------- */ }
         <Route path="/admin" element={ <LayoutAdmin /> }>
           <Route index element={ <HomeAdmin /> } />
+          <Route path="/admin/appointmentadmin" element={ <AppointmentAdmin /> } />
+          <Route path="/admin/appointmentedit/:id" element={ <AppointmentEdit /> } />
           <Route path="*" element={ <NoMatch /> } />
         </Route>
       </>

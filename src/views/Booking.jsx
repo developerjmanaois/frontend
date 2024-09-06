@@ -51,11 +51,11 @@ const Booking = () => {
 
     <div>
 
-        { isLoading && <Loader /> }
+        { (isLoading || isLoadingTreatment) && <Loader /> }
         
-        { error && <Error /> }
+        { (error || errorTreatment) && <Error /> }
 
-        <div className='grid grid-cols-2 my-32 bg-bgwhite bookingContainer'>
+        <div className='grid grid-cols-2 mb-32 mt-60 bg-bgwhite bookingContainer'>
 
             <div className=''>
                 <img className='bookingImg w-full object-cover' src={appointment} alt="relaxing" />

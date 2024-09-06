@@ -9,6 +9,7 @@
 
         .teamImgContainer {
             width: 100%;
+            margin-bottom: 120px;
         }
     }
 }
@@ -17,9 +18,15 @@
     .teamContainer {
         gap: 20px;
         padding: 0 20px;
+
+        .teamImgContainer {
+            width: 310px;
+
+            .nameContainer {
+                width: fit-content;
+                right: 31px;
+            }
+        }
     }
 
-    .teamImgContainer {
-        width: 310px;
-    }
 }
